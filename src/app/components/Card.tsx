@@ -14,11 +14,15 @@ const Card = ({imgURL, title, abstract}:Props) => {
 
     return (
         <div className={styles.cardWrapper}
-         style={{backgroundImage: `url(${isIMG()})`, background: `rgba(3, 3, 3, 0.389)`}}>
-
+         style={{ background: `linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ), url(${isIMG()})`, 
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover'}}>
+            
             <section>{abstract}</section>
             <section>{title}</section>
-            
         </div>
     );
 };

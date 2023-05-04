@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import {getNews, selectNews} from '../../features/news/newsSlice'
 import { useAppDispatch, useAppSelector } from '../hooks';
 import Card from '../components/Card';
+import styles from './home.module.scss';
 
 const Home = () => {
 
@@ -16,9 +17,11 @@ const Home = () => {
     
 
     return (
-        <div>
-            <h2></h2>
-            {news?.map(arr => <Card key={arr.id} abstract={arr.abstract} title={arr.title} imgURL={arr.media[0]?.['media-metadata'][2].url}/>)}
+        <div className={styles.homePageWrapper}>
+            <h1>Top stories from NY Times</h1>
+            <div className={styles.newsContainer}>
+                {news?.map(arr => <Card key={arr.id} abstract={arr.abstract} title={arr.title} imgURL={arr.media[0]?.['media-metadata'][2].url}/>)}
+            </div>
         </div>
     );
 };

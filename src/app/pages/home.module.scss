@@ -1,0 +1,16 @@
+.homePageWrapper {
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.newsContainer {
+    gap: 0.5rem;
+    max-width: 70%;
+    flex-wrap: wrap;
+}
+
+.homePageWrapper, .newsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
