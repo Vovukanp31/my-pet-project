@@ -1,9 +1,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { newsService } from "./newsService";
 import { RootState } from "../../app/store";
+import { IFeed } from "./models/IFeed";
 
 export interface NewsState {
-    value: any[] | null;
+    value: IFeed[] | null;
     status: 'idle' | 'loading' | 'failed';
 }
 

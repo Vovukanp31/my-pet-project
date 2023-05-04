@@ -1,5 +1,6 @@
 import {NEWS_INSTANCE} from './newsAPI'
 import { AxiosResponse } from 'axios';
+import { IFeed } from './models/IFeed';
 
 const responseBody = (response: AxiosResponse) => response.data;
 
@@ -8,5 +9,5 @@ const requests = {
 }
 
 export const newsService = {
-    getNews: (): Promise<[]> => requests.get(`/viewed/7.json?api-key=${process.env.REACT_APP_ARTICLES_API_KEY}`).then(res => res.results),
+    getNews: (): Promise<IFeed[]> => requests.get(`/viewed/7.json?api-key=${process.env.REACT_APP_ARTICLES_API_KEY}`).then(res => res.results),
 }

@@ -20,7 +20,7 @@ const Home = () => {
         <div className={styles.homePageWrapper}>
             <h1>Top stories from NY Times</h1>
             <div className={styles.newsContainer}>
-                {news?.map(arr => <Card key={arr.id} byLine={arr.byline} title={arr.title} imgURL={arr.media[0]?.['media-metadata'][2].url}/>)}
+                {news?.map(arr => <Card key={arr.id} byLine={arr.byline} title={arr.title} imgURL={arr.media[0]?.['media-metadata']?.[2].url}/>)}
             </div>
         </div>
     );
