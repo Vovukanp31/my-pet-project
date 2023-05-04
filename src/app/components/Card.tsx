@@ -5,10 +5,10 @@ import background from '../assets/images/no-image.png'
 type Props = {
     imgURL?: string;
     title: string;
-    abstract: string;
+    byLine: string;
 }
 
-const Card = ({imgURL, title, abstract}:Props) => {
+const Card = ({imgURL, title, byLine}:Props) => {
 
     const isIMG = () => imgURL ? imgURL : background;
 
@@ -21,8 +21,9 @@ const Card = ({imgURL, title, abstract}:Props) => {
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover'}}>
             
-            <section>{abstract}</section>
-            <section>{title}</section>
+            <section className={styles.byLine}>{byLine}</section>
+            <div className={styles.line}></div>
+            <section className={styles.title}>{title}</section>
         </div>
     );
 };
