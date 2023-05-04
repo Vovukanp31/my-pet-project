@@ -11,7 +11,6 @@
 
 .byLine {
     width: 70%;
-    text-align: end;
     font-weight: 100;
 }
 
@@ -22,11 +21,11 @@
 }
 
 .byLine, .title {
+    text-align: end;
     margin-left: 2%;
     margin-bottom: 2%;
 }
 .title {
     font-weight: 500;
-    text-align: end;
     padding-right: 2%;
 }
