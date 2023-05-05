@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './card.module.scss';
-import background from '../assets/images/no-image.png'
+import background from '../assets/images/no-image.jpg'
 
 type Props = {
     imgURL?: string;
@@ -19,9 +19,10 @@ const Card = ({imgURL, title, byLine}:Props) => {
             rgba(0, 0, 0, 0.7)
           ), url(${isIMG()})`, 
           backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover'}}>
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center'}}>
             
-            <section className={styles.byLine}>{byLine}</section>
+            <section className={styles.byLine}>{byLine ? byLine : 'Unknown Author'}</section>
             <div className={styles.line}></div>
             <section className={styles.title}>{title}</section>
         </div>
